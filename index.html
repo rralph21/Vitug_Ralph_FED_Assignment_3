@@ -21,14 +21,20 @@
 
     <body>
         <div id="game-container">
-            <h1>Your Adventure Game</h1>
-            <div id="question-container">
-                <p id="question">Your adventure begins now...</p>
+            <h1>Fishing Adventure Game</h1>
+            <div id="status">
+                <p>Baits left: <span id="baits-left">5</span></p>
+                <p>Fish caught: <span id="fish-caught">0</span></p>
             </div>
-            <ul id="answers">
+
+            <div id="question-container" aria-live="polite">
+                <p id="question">Press "start game" to begin fishing!!</p>
+            </div>
+            <ul id="answers" role="list">
                 <!-- Answer buttons will be injected here by JavaScript -->
             </ul>
-            <button id="next-btn" onclick="nextQuestion()">Next</button>
+            <button id="start-btn">Start Game</button>
+            <button id="next-btn" hidden>Next</button>
         </div>
         <script src="script.js"></script>
     </body>

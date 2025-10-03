@@ -13,19 +13,44 @@ header {
 	padding: 0.625em 1.25em;
 	text-align: center;
 }
+
+#game-container {
+  background-color: rgba(255,255,255,0.85);
+  padding: 1.5rem;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 15%;
+}
  
 main {
 	padding: 1.25em;
 }
 
-footer {
-    background: rgba(139,0,0,0.8);
-    padding: 0.5rem;
-    color: #ffe066;
+button {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkcyan;
+}
+
+#answers button {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
 }
 
 footer {
-    background-color: rgba(139,0,0,0.8);
+    background: rgba(139,0,0,0.8);
     padding: 0.5rem;
     color: #ffe066;
 }

@@ -20,6 +20,16 @@
     </head>
 
     <body>
+        <div id="game-info">
+            <h2>** How to Play **</h2>
+            <p>You start with 5 baits. Each (bait) question is a chance to catch a fish:</p>
+            <ul>
+                <li>Correct answer => you catch a fish.</li>
+                <li> Wrong answer => your bait is wasted.</li>
+                <li>If you get 2 correct answers consecutively, you catch a rare fish and win immediately!</li>
+                <li>If you use all 5 baits without 2 consecutive correct answers, the game ends.</li>
+            </ul>
+
         <div id="game-container">
             <h1>Fishing Adventure Game</h1>
             <div id="status">
@@ -28,7 +38,7 @@
             </div>
 
             <div id="question-container" aria-live="polite">
-                <p id="question">Press "start game" to begin fishing!!</p>
+                <p id="question">Press "Start Same" to begin fishing!!</p>
             </div>
             <ul id="answers" role="list">
                 <!-- Answer buttons will be injected here by JavaScript -->
@@ -36,6 +46,7 @@
             <button id="start-btn">Start Game</button>
             <button id="next-btn" hidden>Next</button>
         </div>
+
         <script src="script.js"></script>
     </body>
 </html>

@@ -1,21 +1,36 @@
 body {
 	font-family: "Arial", sans-serif;
-    color: salmon;
+    color: white;
 	margin: 0;
 	padding: 0;
 	background-color: #f4f4f4;
     text-align: center;
 }
 
-header {
-	background-color: #333;
-	color: #ec4343;
-	padding: 0.625em 1.25em;
-	text-align: center;
+#game-info {
+  background-color: rgba(5, 99, 150, 0.87);
+  border: 2px solid rgb(3, 94, 94);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 700px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+#game-info h2 {
+  margin-top: 0;
+  color: white;
+  text-align: center;
+}
+
+#game-info li {
+  margin-bottom: 0.5rem;
 }
 
 #game-container {
-  background-color: rgba(255,255,255,0.85);
+  background-color: rgba(0, 0, 255, 0.788);
   padding: 1.5rem;
   margin: 2rem auto;
   width: 90%;
@@ -49,8 +64,3 @@ button:hover {
   margin-bottom: 0.5rem;
 }
 
-footer {
-    background: rgba(139,0,0,0.8);
-    padding: 0.5rem;
-    color: #ffe066;
-}

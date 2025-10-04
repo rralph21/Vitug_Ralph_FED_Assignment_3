@@ -125,6 +125,9 @@ function handleAnswer(selected) {
   currentQuestionIndex++;
   updateStatus();
 
+  li.appendChild(btn);
+  answersEl.appendChild(li);
+
   renderQuestion(); 
 }
 
@@ -141,6 +144,12 @@ function endGame(win) {
   } else {
     questionEl.textContent = "You used all your baits without 2 in a row. Game over!";
   }
+
+   // End game if out of baits or no more questions
+  if (baitsLeft <= 0 || currentQuestionIndex >= questions.length) {
+    return endGame(streak >= 2);
+  }
+
 }
 
 // Reset 

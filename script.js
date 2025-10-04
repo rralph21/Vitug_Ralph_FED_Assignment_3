@@ -95,6 +95,9 @@ function addAnswerButton(label) {
 
   // When clicked, evaluate the answer
   btn.addEventListener("click", () => handleAnswer(label));
+  
+  li.appendChild(btn);
+  answersEl.appendChild(li);
 
 }
 
@@ -125,8 +128,10 @@ function handleAnswer(selected) {
   currentQuestionIndex++;
   updateStatus();
 
-  li.appendChild(btn);
-  answersEl.appendChild(li);
+   // End game if out of baits or no more questions
+  if (baitsLeft <= 0 || currentQuestionIndex >= questions.length) {
+    return endGame(streak >= 2);
+  }
 
   renderQuestion(); 
 }
@@ -144,15 +149,9 @@ function endGame(win) {
   } else {
     questionEl.textContent = "You used all your baits without 2 in a row. Game over!";
   }
-
-   // End game if out of baits or no more questions
-  if (baitsLeft <= 0 || currentQuestionIndex >= questions.length) {
-    return endGame(streak >= 2);
-  }
-
 }
 
-// Reset 
+// Reset and Update
 
 function resetGame() {
   gameActive = false;
@@ -166,4 +165,8 @@ function resetGame() {
   fishCaughtEl.textContent = "0";
 }
 
+function updateStatus() {
+  baitsLeftEl.textContent = baitsLeft;
+  fishCaughtEl.textContent = fishCaught;
+}
 

@@ -9,11 +9,10 @@ body {
 
 #game-info {
   background-color: rgba(5, 99, 150, 0.87);
-  border: 2px solid rgb(3, 94, 94);
+  border: 5px blue;
   border-radius: 8px;
   padding: 1rem 1.5rem;
   margin: 1rem auto;
-  width: 90%;
   max-width: 700px;
   text-align: left;
   font-size: 1rem;
@@ -33,10 +32,9 @@ body {
   background-color: rgba(0, 0, 255, 0.788);
   padding: 1.5rem;
   margin: 2rem auto;
-  width: 90%;
-  max-width: 600px;
+  max-width: 700px;
   border-radius: 10px;
-  margin-top: 15%;
+  margin-top: 70px;
 }
  
 main {
